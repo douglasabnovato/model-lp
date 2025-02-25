@@ -1,0 +1,117 @@
+/* Estilos base para mobile */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #65691c77;
+}
+
+h2 {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+header,
+main,
+footer {
+  padding: 20px;
+}
+
+header {
+  background-color: #5b0a8777;
+}
+
+main {
+  background-color: #157bc077;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-item {
+  background-color: #ccc;
+  padding: 20px;
+  flex: 1 1 200px;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-gap: 10px;
+}
+
+.grid-item { 
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.grid-item:nth-child(1) {
+  grid-area: header;
+}
+
+.grid-item:nth-child(2) {
+  grid-area: menu;
+}
+
+.grid-item:nth-child(3) {
+  grid-area: content;
+}
+
+.grid-item:nth-child(4) {
+  grid-area: footer;
+}
+
+.imgResponsive{ 
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+      padding: 20px;
+      background-color: #ccc;
+  }
+
+footer {
+  background-color: #b81b9377;
+}
+ 
+/* Media Query para telas maiores */
+@media (min-width: 768px) {
+  body {
+    background-color: #238d4377;
+  }
+
+  header,
+  main,
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as divs filhas "quebrem" para a próxima linha em telas menores */
+    justify-content: space-between; /* Espaça as divs uniformemente */
+  }
+  
+  .filha {
+    flex: 1 1 30%; /* Cresce, encolhe e ocupa inicialmente 30% do espaço */
+    box-sizing: border-box; /* Inclui padding e border no total da largura e altura */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  @media (max-width: 768px) {
+    .filha {
+      flex-basis: 100%; /* Em telas menores, cada div filha ocupa 100% da largura */
+    }
+  }
+  
