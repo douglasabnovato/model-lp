@@ -95,7 +95,6 @@ footer {
   header,
   main,
   footer {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -103,22 +102,19 @@ footer {
 
 .container-flex-mae-1 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  
   /* Permite que as divs filhas "quebrem" para a próxima linha em telas menores */
   /* Espaça as divs uniformemente */
 }
 
 .filha-1 {
-  flex: 1 1 30%;
-  box-sizing: border-box;
+  flex: 1 1 30%; /* Cresce, encolhe e ocupa inicialmente 30% do espaço */
+  box-sizing: border-box; /* Inclui padding e border no total da largura e altura */
   margin: 10px;
   padding: 20px;
   background-color: #f0f0f0;
-
-  /* Cresce, encolhe e ocupa inicialmente 30% do espaço */
-  /* Inclui padding e border no total da largura e altura */
 }
 
 .filha-1 img {

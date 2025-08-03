@@ -1,0 +1,184 @@
+/* variaveis.css */
+:root {
+    --green-claro: #D2DC3D;
+    --green-300: #87C34A;
+    --cinzaclaro: #D6DADB;
+    --cinza300: #838588;
+    --branco: #FFFFFF;
+    --branco300: #F8F8F8;
+    --preto: #333;
+    --preto300: #000000c8;
+    --azul: #0D6A90;
+    --vermelho: #e3062d;
+    --verde-hover: #20A389;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --espacamento-padrao: 1rem;
+    --borda-padrao: 1px solid var(--cinzaclaro);
+    --raio-borda-padrao: 5px;
+  }
+  
+  /* reset.css */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* formulario.css */
+  .abc-formulario {
+    width: 100%; /* Garante que a seção ocupe toda a largura disponível */
+  }
+  
+  .formulario {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: var(--fonte-principal);
+    background-color: var(--branco);
+  }
+  
+  .formulario__titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: var(--espacamento-padrao);
+  }
+  
+  .formulario__linha-divisoria {
+    width: 5rem;
+    height: 2px;
+    background-color: var(--azul);
+    margin: var(--espacamento-padrao) auto;
+  }
+  
+  .formulario__descricao {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+  }
+  
+  /* campos.css */
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grupo-campos {
+    margin-bottom: 1.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    border: none;
+    padding: 0;
+  }
+  
+  .grupo-campos legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--espacamento-padrao);
+    color: var(--azul);
+  }
+  
+  .campo {
+    margin-bottom: var(--espacamento-padrao);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    color: var(--azul);
+    font-size: var(--espacamento-padrao);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 0.7 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    border: var(--borda-padrao);
+    border-radius: var(--raio-borda-padrao);
+    font-size: var(--espacamento-padrao);
+    color: var(--cinza300);
+  }
+  
+  /* radios.css */
+  .ambientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-padrao);
+  }
+  
+  .ambiente {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+  }
+  
+  .ambiente input[type="radio"] {
+    margin-right: 0.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+  }
+  
+  /* checkbox.css */
+  .consentimento {
+    margin-bottom: 1.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+  }
+  
+  .consentimento label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .consentimento input[type="checkbox"] {
+    margin-right: 0.5 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+  }
+  
+  /* botao.css */
+  .botao-enviar {
+    background-color: var(--vermelho);
+    color: #fff;
+    font-weight: 800;
+    padding: var(--espacamento-padrao) 2 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    border: none;
+    border-radius: var(--raio-borda-padrao);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    align-self: center;
+  }
+  
+  .botao-enviar:hover {
+    background-color: var(--verde-hover);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* responsivo.css */
+  @media (max-width: 768px) {
+    .formulario {
+      padding: var(--espacamento-padrao);
+    }
+  
+    .formulario__titulo {
+      font-size: 2rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      font-size: 0.9 * var(--espacamento-padrao); /* Usa variável para espaçamento */
+    }
+  
+    .botao-enviar {
+      font-size: var(--espacamento-padrao);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .formulario__titulo {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* obrigatorio.css */
+  .obrigatorio {
+    color: var(--vermelho);
+  }
